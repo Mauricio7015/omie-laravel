@@ -1,10 +1,10 @@
 {
-    "name": "bee-delivery/omie",
-    "description": "Integração rápida e fácil com a Omie, em PHP/Laravel",
+    "name": "omie/omie",
+    "description": "Integração com o ERP Omie usando Laravel.",
     "authors": [
         {
-            "name": "John Kennedy",
-            "email": "johnkmedeiros@gmail.com"
+            "name": "Mauricio Macedo",
+            "email": "mauriciomacedo7015@gmail.com"
         }
     ],
     "type": "library",
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "BeeDelivery\\Omie\\": "src/"
+            "Omie\\Omie\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "BeeDelivery\\Omie\\OmieServiceProvider"
+                "Omie\\Omie\\OmieServiceProvider"
             ]
         }
     }
