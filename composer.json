@@ -1,5 +1,5 @@
 {
-    "name": "omie/omie",
+    "name": "omie-laravel/omie",
     "description": "Integração com o ERP Omie usando Laravel.",
     "authors": [
         {
@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Omie\\Omie\\": "src/"
+            "Omie-Laravel\\Omie\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Omie\\Omie\\OmieServiceProvider"
+                "Omie-Laravel\\Omie\\OmieServiceProvider"
             ]
         }
     }
