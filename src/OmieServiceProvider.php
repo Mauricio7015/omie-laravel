@@ -1,6 +1,6 @@
 <?php
 
-namespace BeeDelivery\Omie;
+namespace OmieLaravel\Omie;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -15,13 +15,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Omie-Laravel\\Omie\\": "src/"
+            "OmieLaravel\\Omie\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Omie-Laravel\\Omie\\OmieServiceProvider"
+                "OmieLaravel\\Omie\\OmieServiceProvider"
             ]
         }
     }

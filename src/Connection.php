@@ -1,6 +1,6 @@
 <?php
 
-namespace BeeDelivery\Omie\src;
+namespace OmieLaravel\Omie\src;
 
 
 use GuzzleHttp\Client;

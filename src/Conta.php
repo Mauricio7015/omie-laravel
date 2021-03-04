@@ -1,7 +1,7 @@
 <?php
 
-namespace BeeDelivery\Omie\src;
-use BeeDelivery\Omie\src\Connection;
+namespace OmieLaravel\Omie\src;
+use OmieLaravel\Omie\src\Connection;
 
 class Conta
 {

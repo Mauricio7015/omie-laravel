@@ -1,8 +1,8 @@
 <?php
 
-namespace BeeDelivery\Omie\src;
+namespace OmieLaravel\Omie\src;
 
-use BeeDelivery\Omie\src\Connection;
+use OmieLaravel\Omie\src\Connection;
 
 class Cliente
 {
