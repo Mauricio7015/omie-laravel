@@ -7,7 +7,7 @@ Pacote de integração com [https://omie.com.br/](https://omie.com.br/)
 Instale com [composer](https://getcomposer.org/):
 
 ```bash
-composer require omie/omie
+composer require omie-laravel/omie
 ```
 
 ## Como utilizar?
