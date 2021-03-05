@@ -2,9 +2,10 @@
 
 namespace OmieLaravel\Omie;
 
-use OmieLaravel\Omie\src\Cliente;
 use OmieLaravel\Omie\src\Conta;
 use OmieLaravel\Omie\src\Pagavel;
+use OmieLaravel\Omie\src\Produto;
+use OmieLaravel\Omie\src\Cliente;
 use OmieLaravel\Omie\src\Recebivel;
 use OmieLaravel\Omie\src\Categoria;
 use OmieLaravel\Omie\src\Departamento;
@@ -32,5 +33,9 @@ class Omie{
 
     public function conta($app_key, $app_secret){
         return new Conta($app_key, $app_secret);
+    }
+
+    public function produto($app_key, $app_secret){
+        return new Produto($app_key, $app_secret);
     }
 }
