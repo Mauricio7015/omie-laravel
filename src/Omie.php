@@ -3,6 +3,7 @@
 namespace OmieLaravel\Omie;
 
 use OmieLaravel\Omie\src\Conta;
+use OmieLaravel\Omie\src\Local;
 use OmieLaravel\Omie\src\Pagavel;
 use OmieLaravel\Omie\src\Produto;
 use OmieLaravel\Omie\src\Cliente;
@@ -47,5 +48,9 @@ class Omie{
 
     public function fornecedor($app_key, $app_secret){
         return new Fornecedor($app_key, $app_secret);
+    }
+
+    public function local($app_key, $app_secret){
+        return new Local($app_key, $app_secret);
     }
 }
