@@ -9,6 +9,7 @@ use OmieLaravel\Omie\src\Cliente;
 use OmieLaravel\Omie\src\Recebivel;
 use OmieLaravel\Omie\src\Categoria;
 use OmieLaravel\Omie\src\Departamento;
+use OmieLaravel\Omie\src\FormaPagamento;
 
 class Omie{	
     public function cliente($app_key, $app_secret){
@@ -37,5 +38,9 @@ class Omie{
 
     public function produto($app_key, $app_secret){
         return new Produto($app_key, $app_secret);
+    }
+
+    public function formaPagamento($app_key, $app_secret){
+        return new FormaPagamento($app_key, $app_secret);
     }
 }
