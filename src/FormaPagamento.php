@@ -17,17 +17,17 @@ class FormaPagamento
     /**
     * Recupera todos os produtos
     *
-    * @see https://app.omie.com.br/api/v1/geral/produtos/formaspagvendas/#ListarFormasPagVendas
+    * @see https://app.omie.com.br/api/v1/produtos/formaspagcompras/#ListarFormasPagCompras
      * @param Integer $pagina, $registros_por_pagina
      * @return json
      */
     public function listar($pagina = 1, $registros_por_pagina = 50)
     {
-        return $this->http->post('/geral/produtos/formaspagvendas/', [
+        return $this->http->post('/produtos/formaspagcompras/', [
 
             "pagina"                => $pagina,
             "registros_por_pagina"  => $registros_por_pagina
 
-        ], 'ListarFormasPagVendas');
+        ], 'ListarFormasPagCompras');
     }
 }
