@@ -9,8 +9,10 @@ use OmieLaravel\Omie\src\Cliente;
 use OmieLaravel\Omie\src\Recebivel;
 use OmieLaravel\Omie\src\Categoria;
 use OmieLaravel\Omie\src\Fornecedor;
+use OmieLaravel\Omie\src\TabelaPreco;
 use OmieLaravel\Omie\src\Departamento;
 use OmieLaravel\Omie\src\FormaPagamento;
+use OmieLaravel\Omie\src\TabelaPrecoItem;
 
 class Omie{	
     public function cliente($app_key, $app_secret){
@@ -47,5 +49,13 @@ class Omie{
 
     public function fornecedor($app_key, $app_secret){
         return new Fornecedor($app_key, $app_secret);
+    }
+
+    public function tabelaPreco($app_key, $app_secret){
+        return new TabelaPreco($app_key, $app_secret);
+    }
+
+    public function tabelaPrecoItem($app_key, $app_secret){
+        return new TabelaPrecoItem($app_key, $app_secret);
     }
 }
