@@ -4,7 +4,7 @@ namespace OmieLaravel\Omie\src;
 
 use OmieLaravel\Omie\src\Connection;
 
-class FormaPagamento
+class Fornecedor
 {
 
     public $http;
@@ -17,17 +17,17 @@ class FormaPagamento
     /**
     * Recupera todos os produtos
     *
-    * @see https://app.omie.com.br/api/v1/produtos/formaspagcompras/#ListarFormasPagCompras
+    * @see https://app.omie.com.br/api/v1/estoque/produtofornecedor/#pfListarRequest
      * @param Integer $pagina, $registros_por_pagina
      * @return json
      */
     public function listar($pagina = 1, $registros_por_pagina = 50)
     {
-        return $this->http->post('/produtos/formaspagcompras/', [
+        return $this->http->post('/estoque/produtofornecedor/', [
 
             "pagina"                => $pagina,
             "registros_por_pagina"  => $registros_por_pagina
 
-        ], 'ListarFormasPagCompras');
+        ], 'pfListarRequest');
     }
 }
