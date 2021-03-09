@@ -22,15 +22,27 @@ class Cliente
      * @param String $apenas_importado, S/N
      * @return json
      */
-    public function listar($pagina = 1, $registros_por_pagina = 50, $apenas_importado_api = "N")
+    public function listar($pagina = 1, $registros_por_pagina = 50, $apenas_importado_api = "N", $tag = false)
     {
-        return $this->http->post('/geral/clientes/', [
+        if ($tag) {
+            $tags = '[{"tag":"'.$tag.'"}]';
+            
 
-            "pagina"                => $pagina,
-            "registros_por_pagina"  => $registros_por_pagina,
-            "apenas_importado_api"  => $apenas_importado_api,
-
-        ], 'ListarClientes');
+            return $this->http->post('/geral/clientes/', [
+                "pagina"                => $pagina,
+                "registros_por_pagina"  => $registros_por_pagina,
+                "apenas_importado_api"  => $apenas_importado_api,
+                "clientesFiltro"  => [
+                    "tags" => json_decode($tags)
+                ],
+            ], 'ListarClientes');   
+        } else {
+            return $this->http->post('/geral/clientes/', [
+                "pagina"                => $pagina,
+                "registros_por_pagina"  => $registros_por_pagina,
+                "apenas_importado_api"  => $apenas_importado_api
+            ], 'ListarClientes');   
+        }
     }
 
 
