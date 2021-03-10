@@ -29,6 +29,7 @@ class Produto
             "pagina"                => $pagina,
             "registros_por_pagina"  => $registros_por_pagina,
             "apenas_importado_api"  => $apenas_importado_api,
+            "filtrar_apenas_omiepdv" =>  "N"
 
         ], 'ListarProdutos');
     }

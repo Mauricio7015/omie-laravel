@@ -21,7 +21,7 @@ class Pedido
      * @param Integer $pagina, $registros_por_pagina
      * @return json
      */
-    public function criar($pagina = 1, $registros_por_pagina = 50, $arr)
+    public function criar($arr)
     {
         return $this->http->post('/produtos/pedidocompra/', $arr, 'IncluirPedCompra');
     }
