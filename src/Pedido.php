@@ -1,0 +1,28 @@
+<?php
+
+namespace OmieLaravel\Omie\src;
+
+use OmieLaravel\Omie\src\Connection;
+
+class Pedido
+{
+
+    public $http;
+
+    public function __construct($apiKey = null, $apiSecret = null)
+    {
+        $this->http = new Connection($apiKey, $apiSecret);
+    }
+
+    /**
+    * Incluir Pedido
+    *
+    * @see https://app.omie.com.br/api/v1/produtos/pedidocompra/#IncluirPedCompra
+     * @param Integer $pagina, $registros_por_pagina
+     * @return json
+     */
+    public function criar($pagina = 1, $registros_por_pagina = 50, $arr)
+    {
+        return $this->http->post('/produtos/pedidocompra/', $arr, 'IncluirPedCompra');
+    }
+}
