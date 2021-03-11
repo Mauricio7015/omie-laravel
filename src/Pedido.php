@@ -23,7 +23,7 @@ class Pedido
      */
     public function criar($arr)
     {
-        return $this->http->post('/produtos/pedidocompra/', $arr, 'IncluirPedCompra');
+        return $this->http->post('/produtos/pedidocompra/', $arr, 'UpsertPedCompra');
     }
 
     public function consultar($codIntegrado)
