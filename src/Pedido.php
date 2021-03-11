@@ -25,4 +25,11 @@ class Pedido
     {
         return $this->http->post('/produtos/pedidocompra/', $arr, 'IncluirPedCompra');
     }
+
+    public function consultar($codIntegrado)
+    {
+        return $this->http->post('/produtos/pedidocompra/', [
+            'nCodPed' => $codIntegrado
+        ], 'ConsultarPedCompra');
+    }
 }
